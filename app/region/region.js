@@ -12,4 +12,15 @@ angular.module('myApp.region', ['ngRoute'])
 .controller('RegionCtrl', ['$scope', 'Region',
   function($scope, Region) {
     $scope.region = Region.query();
+
+     angular.extend($scope, {
+        center: {
+          lat: 51,
+          lng: 0,
+          zoom: 9
+        },
+        defaults: {
+            scrollWheelZoom: false
+        }
+    });
   }]);

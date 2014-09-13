@@ -1,6 +1,14 @@
-<p>Regional stuff will go here</p>
-<ul class="">
-  <li ng-repeat="council in region" class="thumbnail ">
-    {{council.rank}}: <a href="#/council/{{}}">{{council.LA_name}}</a>
-  </li>
-</ul>
+<div class="row">
+  <div class="col-md-8">
+    Map goes here
+    <leaflet center="center"  width="720px" height="540px"></leaflet>
+  </div>
+  <div class="col-md-4">
+    <p>Regional stuff will go here</p>
+    <ul class="list-unstyled">
+      <li ng-repeat="council in region">
+        {{council.rank}}: <a href="#/council/{{}}">{{council.LA_name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
