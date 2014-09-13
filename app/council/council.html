@@ -1,3 +1,4 @@
+<h2>How does your council stack up?</h2>
 <div class="row">
   <div class="col-md-4">
     <leaflet center="center" geojson="geojson" width="360px" height="320px"></leaflet>
@@ -10,19 +11,19 @@
 
     <dl>
       <dt>Total Capacity</dt>
-      <dd>{{council.total_capacity}}</dd>
+      <dd>{{council.total_capacity | number:0}}</dd>
     </dl>
     <dl>
       <dt>KW per household</dt>
-      <dd>{{council.kw_per_household}}</dd>
+      <dd>{{council.kw_per_household}} KW</dd>
     </dl>
     <dl>
       <dt>Rank</dt>
-      <dd>{{council.rank}}</dd>
+      <dd>{{council.rank | number:0}}</dd>
     </dl>
     <dl>
       <dt>Households</dt>
-      <dd>{{council.households}}</dd>
+      <dd>{{council.households | number:0}}</dd>
     </dl>
   </div>
 </div>
