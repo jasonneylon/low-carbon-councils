@@ -9,8 +9,8 @@ angular.module('myApp.uk', ['ngRoute'])
   });
 }])
 
-.controller('UkCtrl', ['$scope', '$routeParams', 'Region',
-  function($scope, $routeParams, Region) {
+.controller('UkCtrl', ['$scope', '$routeParams', '$http', 'Region',
+  function($scope, $routeParams, $http, Region) {
     $scope.regions =  [
       { name: "London", id: "London"},
       { name: "North West", id: "North_West"},
@@ -18,6 +18,14 @@ angular.module('myApp.uk', ['ngRoute'])
       { name: "Scotland", id: "Scotland"},
       ];
 
+     $http.get("data/maps/2490.geojson").success(function(data, status) {
+        angular.extend($scope, {
+            geojson: {
+                data: data,
+                resetStyleOnMouseout: true
+            }
+        });
+      });
 
      angular.extend($scope, {
         center: {

@@ -9,19 +9,28 @@ angular.module('myApp.region', ['ngRoute'])
   });
 }])
 
-.controller('RegionCtrl', ['$scope', '$routeParams', 'Region',
-  function($scope, $routeParams, Region) {
+.controller('RegionCtrl', ['$scope', '$routeParams', '$http', 'Region',
+  function($scope, $routeParams, $http, Region) {
     $scope.region = Region.query({name: $routeParams.regionName});
     $scope.regionName = $routeParams.regionName;
 
-     angular.extend($scope, {
-        center: {
-          lat: 51,
-          lng: 0,
-          zoom: 9
-        },
-        defaults: {
-            scrollWheelZoom: false
-        }
+   $http.get("data/maps/2490.geojson").success(function(data, status) {
+      angular.extend($scope, {
+          geojson: {
+              data: data,
+              resetStyleOnMouseout: true
+          }
+      });
+    });
+
+   angular.extend($scope, {
+      center: {
+        lat: 51,
+        lng: 0,
+        zoom: 9
+      },
+      defaults: {
+          scrollWheelZoom: false
+      }
     });
   }]);
