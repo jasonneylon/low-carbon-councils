@@ -12,8 +12,7 @@ angular.module('myApp.council', ['ngRoute'])
 .controller('CouncilCtrl', ['$scope', '$routeParams', 'Region',
   function($scope, $routeParams, Region) {
     Region.query({name: $routeParams.region}, function(region) {
-      // console.log(_(region).find({ LA_id: routeParams.laId }));
-      $scope.council = region[0];
+      $scope.council = _(region).find({ LA_id: $routeParams.laId });
     });
 
      angular.extend($scope, {
