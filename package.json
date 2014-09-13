@@ -8,10 +8,9 @@
     "express"
   ],
   "dependencies": {
-    "logfmt": "~0.17.0",
     "express": "~3.4.6"
   },
-  
+
   "name": "angular-seed",
   "private": true,
   "version": "0.0.0",
