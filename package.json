@@ -20,6 +20,7 @@
    },
 
   "name": "angular-seed",
+  "main": "scripts/web-server.js",
   "private": true,
   "version": "0.0.0",
   "description": "A starter project for AngularJS",
