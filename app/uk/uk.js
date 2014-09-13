@@ -29,9 +29,9 @@ angular.module('myApp.uk', ['ngRoute'])
 
      angular.extend($scope, {
         center: {
-          lat: 51,
-          lng: 0,
-          zoom: 4
+          lat: 55,
+          lng: -2,
+          zoom: 5
         },
         defaults: {
             scrollWheelZoom: false

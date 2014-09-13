@@ -15,9 +15,21 @@ angular.module('myApp.council', ['ngRoute'])
       $scope.council = _(region).find({ LA_id: $routeParams.laId });
     });
 
+    $scope.region = $routeParams.region
+
 
    $http.get("data/maps/2490.geojson").success(function(data, status) {
+      var point = data.coordinates[0][0];
+      console.log(point);
+
+      // a bit of centering map 
+
       angular.extend($scope, {
+          center: {
+            lat: point[1] + 0.04,
+            lng: point[0] - 0.04,
+            zoom: 10
+          },
           geojson: {
               data: data,
               resetStyleOnMouseout: true
