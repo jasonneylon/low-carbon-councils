@@ -12,6 +12,7 @@ angular.module('myApp.region', ['ngRoute'])
 .controller('RegionCtrl', ['$scope', '$routeParams', 'Region',
   function($scope, $routeParams, Region) {
     $scope.region = Region.query({name: $routeParams.regionName});
+    $scope.regionName = $routeParams.regionName;
 
      angular.extend($scope, {
         center: {

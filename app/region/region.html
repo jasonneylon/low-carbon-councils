@@ -6,7 +6,7 @@
     <p>Regional stuff will go here</p>
     <ul class="list-unstyled">
       <li ng-repeat="council in region">
-        {{council.rank}}: <a href="#/council/{{council.LA_id}}">{{council.LA_name}}</a>
+        {{council.rank}}: <a href="#/council/{{regionName}}/{{council.LA_id}}">{{council.LA_name}}</a>
       </li>
     </ul>
   </div>

@@ -12,6 +12,7 @@
     "angular-mocks": "~1.2.x",
     "angular-resource": "~1.2.x",
     "html5-boilerplate": "~4.3.0",
-    "bootstrap": "~3.x.x"
+    "bootstrap": "~3.x.x",
+    "lodash": " 2.4.1"
   }
 }

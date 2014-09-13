@@ -3,16 +3,18 @@
 angular.module('myApp.council', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/council/:laId', {
+  $routeProvider.when('/council/:region/:laId', {
     templateUrl: 'council/council.html',
     controller: 'CouncilCtrl'
   });
 }])
 
-.controller('CouncilCtrl', ['$scope', 'Region',
-  function($scope, Region) {
-    var region = Region.query();
-    $scope.council = region[0];
+.controller('CouncilCtrl', ['$scope', '$routeParams', 'Region',
+  function($scope, $routeParams, Region) {
+    Region.query({name: $routeParams.region}, function(region) {
+      // console.log(_(region).find({ LA_id: routeParams.laId }));
+      $scope.council = region[0];
+    });
 
      angular.extend($scope, {
         center: {
