@@ -5,6 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.uk',
   'myApp.region',
+  'myApp.council',
   'myApp.version',
   'regionServices',
   'leaflet-directive'
