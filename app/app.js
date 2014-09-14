@@ -23,6 +23,7 @@ angular.module('myApp', [
   'myApp.version',
   'regionServices',
   'councilServices',
+  'countryServices',
   'leaflet-directive',
   'ordinal'
 ]).

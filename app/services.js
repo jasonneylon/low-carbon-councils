@@ -19,3 +19,12 @@ councilServices.factory('Council', ['$resource',
       query: {method: 'GET', isArray: false}
     })
   }])
+
+var countryServices = angular.module('countryServices', ['ngResource']);
+
+countryServices.factory('Country', ['$resource',
+  function($resource) {
+    return $resource('/data/uk', {}, {
+      query: {method: 'GET', isArray: true}
+    })
+  }])
