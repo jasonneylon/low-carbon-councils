@@ -36,23 +36,63 @@
       </div>
     </div>
 
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Have your say in {{council.LA_name}}</h3>
+      </div>
+      <div class="panel-body">
+          Your council works for you. If you think they could be doing more to encourage renewable energy, let them know!
+          <br/>
+          <a class="btn btn-primary">Tweet your council</a>
+          <br/>
+          <br/>
+          <a class="btn btn-primary">Email your councillors</a>
+
+      </div>
+    </div>
+
 
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Detailed stats</h3>
+        <h3 class="panel-title">Detailed statistics</h3>
       </div>
       <div class="panel-body">
         <dl>
           <dt>Total Capacity</dt>
-          <dd>{{council.total_capacity | number:0}}</dd>
-        </dl>
-        <dl>
-          <dt>Rank</dt>
-          <dd>{{council.regional_rank | ordinal }}</dd>
+          <dd>{{council["total_capacity"] | number:0}}</dd>
         </dl>
         <dl>
           <dt>Households</dt>
-          <dd>{{council.households | number:0}}</dd>
+          <dd>{{council["households"] | number:0}}</dd>
+        </dl>
+        <dl>
+          <dt>Percentage in fuel poverty</dt>
+          <dd>{{council["percent_fuel_poor"] | number:0}}%</dd>
+        </dl>
+        <dl>
+          <dt>National rank</dt>
+          <dd>{{council["national_rank"] | number:0}}</dd>
+        </dl>
+
+        <dl>
+          <dt>Solar PV total</dt>
+          <dd>{{council["pv_total"] | number:0}}</dd>
+        </dl>
+        <dl>
+          <dt>Wind total</dt>
+          <dd>{{council["wind_total"] | number:0}}</dd>
+        </dl>
+        <dl>
+          <dt>Anaerobic total</dt>
+          <dd>{{council["anaerobic_total"] | number:0}}</dd>
+        </dl>
+        <dl>
+          <dt>CHP total</dt>
+          <dd>{{council["chp_total"] | number:0}}</dd>
+        </dl>
+        <dl>
+          <dt>Hydro total</dt>
+          <dd>{{council["hydro_total"] | number:0}}</dd>
         </dl>
       </div>
     </div>
