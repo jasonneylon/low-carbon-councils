@@ -79,7 +79,7 @@ config(['$routeProvider', function($routeProvider) {
 
     // get color depending on population density value
     function getColor(v) {
-            d = v * 100 / range;
+            var d = v * 100 / range;
             return d > grades[7]  ? '#800026' :
                    d > grades[6]  ? '#BD0026' :
                    d > grades[5]  ? '#E31A1C' :
