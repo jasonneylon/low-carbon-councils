@@ -88,7 +88,7 @@ angular.module('myApp.uk', ['ngRoute'])
       { name: "South East", id: "South East"},
       { name: "North West", id: "North West"},
       { name: "North East", id: "North East"},
-      {name: "Yorkshire and The Humber", id: "Yorkshire and the Humber"},
+      {name: "Yorkshire and The Humber", id: "Yorkshire and The Humber"},
       {name: "East Midlands", id: "East Midlands"},
       {name: "West Midlands", id: "West Midlands"},
       {name: "East of England", id: "East of England"},
