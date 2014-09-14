@@ -11,7 +11,7 @@
       </div>
       <div class="col-md-6">
         <div style="text-align: center">
-          <strong style="font-size: 72pt">{{council.rank}}</strong>
+          <strong style="font-size: 72pt">{{council.rank | ordinal}}</strong>
           <br/>
           out of 
           <br/>
@@ -56,7 +56,7 @@
         </dl>
         <dl>
           <dt>Rank</dt>
-          <dd>{{council.rank | number:0}}</dd>
+          <dd>{{council.rank | ordinal}}</dd>
         </dl>
         <dl>
           <dt>Households</dt>
