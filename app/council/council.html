@@ -1,18 +1,21 @@
   <div class="col-md-4">
-
     <h1>
       {{council.LA_name}}
       <small>{{region}}</small>
     </h1>
 
+    <div class="panel panel-default">
+      <div class="panel-body">
       <div style="text-align: center">
         <strong style="font-size: 72pt">{{council.regional_rank | ordinal}}</strong>
         <br/>
         out of 
         <br/>
         <strong style="font-size: 72pt">{{council_count}}</strong>
+        <br/>
+        in the {{region}} region
       </div>
-
+    </div>
 
     <div class="panel panel-default">
       <div class="panel-heading">
