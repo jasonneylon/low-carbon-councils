@@ -47,7 +47,10 @@ angular.module('myApp.uk', ['ngRoute'])
         .attr('fill', 'black')
         .attr("dy", ".35em") // vertical-align: middle
         .attr('text-anchor', 'start')
-        .text(barLabel);
+        .text(barLabel)
+        .on("click", function(d){
+            document.location.href = "/#/council/" + d['LA_id'];
+        });
       // bars
       var barsContainer = chart.append('g')
         .attr('transform', 'translate(' + barLabelWidth + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
@@ -58,6 +61,9 @@ angular.module('myApp.uk', ['ngRoute'])
         .attr('stroke', 'white')
         .attr('fill', 'red')
         .style('opacity', .2)
+        .on("click", function(d){
+            document.location.href = "/#/council/" + d['LA_id'];
+        })
         ;
       // bar value labels
       barsContainer.selectAll("text").data(data).enter().append("text")
@@ -68,6 +74,9 @@ angular.module('myApp.uk', ['ngRoute'])
         .attr("text-anchor", "start") // text-align: right
         .attr("fill", "black")
         .attr("stroke", "none")
+        .on("click", function(d){
+            document.location.href = "/#/council/" + d['LA_id'];
+        })
         //.text(function(d) { return d3.round(barValue(d), 2); })
         ;
 
