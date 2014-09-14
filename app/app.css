@@ -37,6 +37,7 @@ body {
 }
 
 #map {
+  margin-top: 20px;
   width: 720px;
   height: 800px;
 }
