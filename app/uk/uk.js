@@ -75,12 +75,19 @@ angular.module('myApp.uk', ['ngRoute'])
 
     $scope.regions =  [
       { name: "London", id: "London"},
-      { name: "South West", id: "South_West"},
-      { name: "South East", id: "South_East"},
-      { name: "North West", id: "North_West"},
-      { name: "North East", id: "North_East"},
+      { name: "South West", id: "South West"},
+      { name: "South East", id: "South East"},
+      { name: "North West", id: "North West"},
+      { name: "North East", id: "North East"},
+      {name: "Yorkshire and The Humber", id: "Yorkshire and the Humber"},
+      {name: "East Midlands", id: "East Midlands"},
+      {name: "West Midlands", id: "West Midlands"},
+      {name: "East of England", id: "East of England"},
       { name: "Scotland", id: "Scotland"},
       ];
+
+
+
 
     Country.query({}, function(councils) {
       console.log(councils);
