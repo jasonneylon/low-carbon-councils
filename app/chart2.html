@@ -6,7 +6,8 @@
      <meta http-equiv="X-UA-Compatible" content="IE=9">
   </head>
   <body>
-    <div id="chart"></div>
+    <div id="chartTop"></div>
+    <div id="chartBottom"></div>
     <script src="http://d3js.org/d3.v2.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script>
@@ -19,7 +20,7 @@ $.getJSON('data/regions/London.json', function(data) {
 });
 $.ajaxSetup({async: true});
         
-function renderChart(data, maxValue) {
+function renderChart(divName, data, maxValue) {
 
 //var data = RegionData;
 //var data = d3.csv.parse(d3.select('#csv').text());
@@ -43,7 +44,7 @@ var yText = function(d, i) { return y(d, i) + yScale.rangeBand() / 2; };
 var x = d3.scale.linear().domain([0, maxValue]).range([0, maxBarWidth]);
 //var x = d3.scale.linear().domain([0, d3.max(data, barValue)]).range([0, maxBarWidth]);
 // svg container element
-var chart = d3.select('#chart').append("svg")
+var chart = d3.select(divName).append("svg")
   .attr('width', maxBarWidth + barLabelWidth + valueLabelWidth)
   .attr('height', gridLabelHeight + gridChartOffset + data.length * barHeight);
 // bar labels
@@ -83,8 +84,10 @@ barsContainer.selectAll("text").data(data).enter().append("text")
     </script>
 
     <script>
-        var partData = RegionData.slice(Math.max(RegionData.length - 5, 1))
-        renderChart(partData, d3.max(RegionData, function(d) { return d['kw_per_household']; }));
+        var partData = RegionData.slice(0,5);
+        renderChart('#chartTop', partData, d3.max(RegionData, function(d) { return d['kw_per_household']; }));
+        partData = RegionData.slice(Math.max(RegionData.length - 5, 1));
+        renderChart('#chartBottom', partData, d3.max(RegionData, function(d) { return d['kw_per_household']; }));
     </script>
   </body>
 </html>
