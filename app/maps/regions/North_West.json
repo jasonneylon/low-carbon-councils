@@ -1,0 +1,314 @@
+[
+    {
+        "total_capacity": 4399.0, 
+        "kw_per_household": 0.17700076449523197, 
+        "LA_id": "16UF", 
+        "rank": 1.0, 
+        "households": 24853, 
+        "LA_name": "Eden"
+    }, 
+    {
+        "total_capacity": 7899.0, 
+        "kw_per_household": 0.17481851983002833, 
+        "LA_id": "16UB", 
+        "rank": 2.0, 
+        "households": 45184, 
+        "LA_name": "Allerdale"
+    }, 
+    {
+        "total_capacity": 6142.0, 
+        "kw_per_household": 0.129857499260011, 
+        "LA_id": "30UN", 
+        "rank": 3.0, 
+        "households": 47298, 
+        "LA_name": "South Ribble"
+    }, 
+    {
+        "total_capacity": 2794.0, 
+        "kw_per_household": 0.1135310849248273, 
+        "LA_id": "30UL", 
+        "rank": 4.0, 
+        "households": 24610, 
+        "LA_name": "Ribble Valley"
+    }, 
+    {
+        "total_capacity": 3605.0, 
+        "kw_per_household": 0.11069147629575044, 
+        "LA_id": "16UE", 
+        "rank": 5.0, 
+        "households": 32568, 
+        "LA_name": "Copeland"
+    }, 
+    {
+        "total_capacity": 5042.0, 
+        "kw_per_household": 0.11055320455193282, 
+        "LA_id": "30UE", 
+        "rank": 6.0, 
+        "households": 45607, 
+        "LA_name": "Chorley"
+    }, 
+    {
+        "total_capacity": 5250.0, 
+        "kw_per_household": 0.10694860355680498, 
+        "LA_id": "16UD", 
+        "rank": 7.0, 
+        "households": 49089, 
+        "LA_name": "Carlisle"
+    }, 
+    {
+        "total_capacity": 5168.0, 
+        "kw_per_household": 0.0996087350384519, 
+        "LA_id": "16UG", 
+        "rank": 8.0, 
+        "households": 51883, 
+        "LA_name": "South Lakeland"
+    }, 
+    {
+        "total_capacity": 5568.0, 
+        "kw_per_household": 0.09342595389107017, 
+        "LA_id": "00EX", 
+        "rank": 9.0, 
+        "households": 59598, 
+        "LA_name": "Blackburn with Darwen"
+    }, 
+    {
+        "total_capacity": 4454.0, 
+        "kw_per_household": 0.09138472270666202, 
+        "LA_id": "30UQ", 
+        "rank": 10.0, 
+        "households": 48739, 
+        "LA_name": "Wyre"
+    }, 
+    {
+        "total_capacity": 3100.0, 
+        "kw_per_household": 0.08741505230803936, 
+        "LA_id": "30UF", 
+        "rank": 11.0, 
+        "households": 35463, 
+        "LA_name": "Fylde"
+    }, 
+    {
+        "total_capacity": 5500.0, 
+        "kw_per_household": 0.08579406305083688, 
+        "LA_id": "00BX", 
+        "rank": 12.0, 
+        "households": 64107, 
+        "LA_name": "Knowsley"
+    }, 
+    {
+        "total_capacity": 3550.0, 
+        "kw_per_household": 0.07502430364766051, 
+        "LA_id": "30UP", 
+        "rank": 13.0, 
+        "households": 47318, 
+        "LA_name": "West Lancashire"
+    }, 
+    {
+        "total_capacity": 2253.0, 
+        "kw_per_household": 0.07335894764261526, 
+        "LA_id": "30UM", 
+        "rank": 14.0, 
+        "households": 30712, 
+        "LA_name": "Rossendale"
+    }, 
+    {
+        "total_capacity": 9055.0, 
+        "kw_per_household": 0.07206411358354821, 
+        "LA_id": "00BS", 
+        "rank": 15.0, 
+        "households": 125652, 
+        "LA_name": "Stockport"
+    }, 
+    {
+        "total_capacity": 11401.0, 
+        "kw_per_household": 0.06957598984523751, 
+        "LA_id": "00EQ", 
+        "rank": 16.0, 
+        "households": 163864, 
+        "LA_name": "Cheshire East"
+    }, 
+    {
+        "total_capacity": 4076.0, 
+        "kw_per_household": 0.06875031625820163, 
+        "LA_id": "30UH", 
+        "rank": 17.0, 
+        "households": 59287, 
+        "LA_name": "Lancaster"
+    }, 
+    {
+        "total_capacity": 9860.0, 
+        "kw_per_household": 0.06732489382331654, 
+        "LA_id": "00EW", 
+        "rank": 18.0, 
+        "households": 146454, 
+        "LA_name": "Cheshire West and Chester"
+    }, 
+    {
+        "total_capacity": 2500.0, 
+        "kw_per_household": 0.06242976651267324, 
+        "LA_id": "30UJ", 
+        "rank": 19.0, 
+        "households": 40045, 
+        "LA_name": "Pendle"
+    }, 
+    {
+        "total_capacity": 8662.0, 
+        "kw_per_household": 0.06193779048981051, 
+        "LA_id": "00BW", 
+        "rank": 20.0, 
+        "households": 139850, 
+        "LA_name": "Wigan"
+    }, 
+    {
+        "total_capacity": 5198.0, 
+        "kw_per_household": 0.058938918054720894, 
+        "LA_id": "00EU", 
+        "rank": 21.0, 
+        "households": 88193, 
+        "LA_name": "Warrington"
+    }, 
+    {
+        "total_capacity": 5090.0, 
+        "kw_per_household": 0.05621514164227732, 
+        "LA_id": "00BQ", 
+        "rank": 22.0, 
+        "households": 90545, 
+        "LA_name": "Rochdale"
+    }, 
+    {
+        "total_capacity": 3101.0, 
+        "kw_per_household": 0.05193260986066452, 
+        "LA_id": "30UK", 
+        "rank": 23.0, 
+        "households": 59712, 
+        "LA_name": "Preston"
+    }, 
+    {
+        "total_capacity": 1810.0, 
+        "kw_per_household": 0.04950495049504951, 
+        "LA_id": "30UG", 
+        "rank": 24.0, 
+        "households": 36562, 
+        "LA_name": "Hyndburn"
+    }, 
+    {
+        "total_capacity": 1850.0, 
+        "kw_per_household": 0.04576715649893622, 
+        "LA_id": "30UD", 
+        "rank": 25.0, 
+        "households": 40422, 
+        "LA_name": "Burnley"
+    }, 
+    {
+        "total_capacity": 4097.0, 
+        "kw_per_household": 0.043397665402622715, 
+        "LA_id": "00BP", 
+        "rank": 26.0, 
+        "households": 94406, 
+        "LA_name": "Oldham"
+    }, 
+    {
+        "total_capacity": 3494.0, 
+        "kw_per_household": 0.04295179908294098, 
+        "LA_id": "00BM", 
+        "rank": 27.0, 
+        "households": 81347, 
+        "LA_name": "Bury"
+    }, 
+    {
+        "total_capacity": 8966.0, 
+        "kw_per_household": 0.042066247536830255, 
+        "LA_id": "00BN", 
+        "rank": 28.0, 
+        "households": 213140, 
+        "LA_name": "Manchester"
+    }, 
+    {
+        "total_capacity": 3160.0, 
+        "kw_per_household": 0.04012647458444972, 
+        "LA_id": "00BZ", 
+        "rank": 29.0, 
+        "households": 78751, 
+        "LA_name": "St. Helens"
+    }, 
+    {
+        "total_capacity": 4771.0, 
+        "kw_per_household": 0.0397500520724849, 
+        "LA_id": "00BL", 
+        "rank": 30.0, 
+        "households": 120025, 
+        "LA_name": "Bolton"
+    }, 
+    {
+        "total_capacity": 5174.0, 
+        "kw_per_household": 0.035819118298626496, 
+        "LA_id": "00CB", 
+        "rank": 31.0, 
+        "households": 144448, 
+        "LA_name": "Wirral"
+    }, 
+    {
+        "total_capacity": 1879.0, 
+        "kw_per_household": 0.03443473161434567, 
+        "LA_id": "00ET", 
+        "rank": 32.0, 
+        "households": 54567, 
+        "LA_name": "Halton"
+    }, 
+    {
+        "total_capacity": 1105.0, 
+        "kw_per_household": 0.03331524360829716, 
+        "LA_id": "16UC", 
+        "rank": 33.0, 
+        "households": 33168, 
+        "LA_name": "Barrow-in-Furness"
+    }, 
+    {
+        "total_capacity": 4050.0, 
+        "kw_per_household": 0.033305099380771856, 
+        "LA_id": "00CA", 
+        "rank": 34.0, 
+        "households": 121603, 
+        "LA_name": "Sefton"
+    }, 
+    {
+        "total_capacity": 3060.0, 
+        "kw_per_household": 0.03186139253027353, 
+        "LA_id": "00BU", 
+        "rank": 35.0, 
+        "households": 96041, 
+        "LA_name": "Trafford"
+    }, 
+    {
+        "total_capacity": 3033.0, 
+        "kw_per_household": 0.03065835093855189, 
+        "LA_id": "00BT", 
+        "rank": 36.0, 
+        "households": 98929, 
+        "LA_name": "Tameside"
+    }, 
+    {
+        "total_capacity": 2970.0, 
+        "kw_per_household": 0.027437503464331246, 
+        "LA_id": "00BR", 
+        "rank": 37.0, 
+        "households": 108246, 
+        "LA_name": "Salford"
+    }, 
+    {
+        "total_capacity": 1742.0, 
+        "kw_per_household": 0.026798350870715647, 
+        "LA_id": "00EY", 
+        "rank": 38.0, 
+        "households": 65004, 
+        "LA_name": "Blackpool"
+    }, 
+    {
+        "total_capacity": 5079.0, 
+        "kw_per_household": 0.02514020403213432, 
+        "LA_id": "00BY", 
+        "rank": 39.0, 
+        "households": 202027, 
+        "LA_name": "Liverpool"
+    }
+]

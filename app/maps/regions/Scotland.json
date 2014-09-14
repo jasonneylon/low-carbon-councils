@@ -1,0 +1,290 @@
+[
+    {
+        "total_capacity": 6658.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00RA", 
+        "rank": 1.0, 
+        "households": 10046, 
+        "kw_per_household": 0.6627513438184351, 
+        "LA_name": "Orkney Islands"
+    }, 
+    {
+        "total_capacity": 24669.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QB", 
+        "rank": 2.0, 
+        "households": 107960, 
+        "kw_per_household": 0.22850129677658393, 
+        "LA_name": "Aberdeenshire"
+    }, 
+    {
+        "total_capacity": 13540.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QH", 
+        "rank": 3.0, 
+        "households": 72066, 
+        "kw_per_household": 0.18788332917048262, 
+        "LA_name": "Dumfries & Galloway"
+    }, 
+    {
+        "total_capacity": 9258.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QE", 
+        "rank": 4.0, 
+        "households": 55857, 
+        "kw_per_household": 0.16574466942370697, 
+        "LA_name": "Scottish Borders"
+    }, 
+    {
+        "total_capacity": 2242.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00RJ", 
+        "rank": 5.0, 
+        "households": 14354, 
+        "kw_per_household": 0.15619339556917933, 
+        "LA_name": "Eilean Siar"
+    }, 
+    {
+        "total_capacity": 5889.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00RG", 
+        "rank": 6.0, 
+        "households": 39085, 
+        "kw_per_household": 0.1506716131508251, 
+        "LA_name": "Stirling"
+    }, 
+    {
+        "total_capacity": 6287.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QD", 
+        "rank": 7.0, 
+        "households": 44911, 
+        "kw_per_household": 0.13998797621963438, 
+        "LA_name": "Argyll & Bute"
+    }, 
+    {
+        "total_capacity": 8179.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00RB", 
+        "rank": 8.0, 
+        "households": 67870, 
+        "kw_per_household": 0.12050979814350965, 
+        "LA_name": "Perth & Kinross"
+    }, 
+    {
+        "total_capacity": 13067.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QT", 
+        "rank": 9.0, 
+        "households": 109412, 
+        "kw_per_household": 0.11942931305524074, 
+        "LA_name": "Highland"
+    }, 
+    {
+        "total_capacity": 4830.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QX", 
+        "rank": 10.0, 
+        "households": 41826, 
+        "kw_per_household": 0.11547841055802611, 
+        "LA_name": "Moray"
+    }, 
+    {
+        "total_capacity": 5936.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QC", 
+        "rank": 11.0, 
+        "households": 53296, 
+        "kw_per_household": 0.11137796457520265, 
+        "LA_name": "Angus"
+    }, 
+    {
+        "total_capacity": 3595.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QM", 
+        "rank": 12.0, 
+        "households": 44136, 
+        "kw_per_household": 0.08145278230922604, 
+        "LA_name": "East Lothian"
+    }, 
+    {
+        "total_capacity": 4072.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00RE", 
+        "rank": 13.0, 
+        "households": 53909, 
+        "kw_per_household": 0.07553469736036654, 
+        "LA_name": "South Ayrshire"
+    }, 
+    {
+        "total_capacity": 799.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00RD", 
+        "rank": 14.0, 
+        "households": 10582, 
+        "kw_per_household": 0.0755055755055755, 
+        "LA_name": "Shetland Islands"
+    }, 
+    {
+        "total_capacity": 9506.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00RF", 
+        "rank": 15.0, 
+        "households": 143156, 
+        "kw_per_household": 0.06640308474670989, 
+        "LA_name": "South Lanarkshire"
+    }, 
+    {
+        "total_capacity": 10179.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QR", 
+        "rank": 16.0, 
+        "households": 169413, 
+        "kw_per_household": 0.06008393688796019, 
+        "LA_name": "Fife"
+    }, 
+    {
+        "total_capacity": 1368.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QF", 
+        "rank": 17.0, 
+        "households": 23676, 
+        "kw_per_household": 0.05778003041054232, 
+        "LA_name": "Clackmannanshire"
+    }, 
+    {
+        "total_capacity": 3199.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QK", 
+        "rank": 18.0, 
+        "households": 55844, 
+        "kw_per_household": 0.05728457846859108, 
+        "LA_name": "East Ayrshire"
+    }, 
+    {
+        "total_capacity": 3743.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QY", 
+        "rank": 19.0, 
+        "households": 66204, 
+        "kw_per_household": 0.0565373693432421, 
+        "LA_name": "North Ayrshire"
+    }, 
+    {
+        "total_capacity": 3677.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00RH", 
+        "rank": 20.0, 
+        "households": 75062, 
+        "kw_per_household": 0.04898617143161653, 
+        "LA_name": "West Lothian"
+    }, 
+    {
+        "total_capacity": 1745.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QN", 
+        "rank": 21.0, 
+        "households": 36691, 
+        "kw_per_household": 0.04755934697882314, 
+        "LA_name": "East Renfrewshire"
+    }, 
+    {
+        "total_capacity": 1419.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QW", 
+        "rank": 22.0, 
+        "households": 35716, 
+        "kw_per_household": 0.039730092955538136, 
+        "LA_name": "Midlothian"
+    }, 
+    {
+        "total_capacity": 1563.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QL", 
+        "rank": 23.0, 
+        "households": 44173, 
+        "kw_per_household": 0.03538360536979603, 
+        "LA_name": "East Dunbartonshire"
+    }, 
+    {
+        "total_capacity": 1557.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QG", 
+        "rank": 24.0, 
+        "households": 44574, 
+        "kw_per_household": 0.03493067707632252, 
+        "LA_name": "West Dunbartonshire"
+    }, 
+    {
+        "total_capacity": 2341.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QQ", 
+        "rank": 25.0, 
+        "households": 70868, 
+        "kw_per_household": 0.03303324490602246, 
+        "LA_name": "Falkirk"
+    }, 
+    {
+        "total_capacity": 3257.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QA", 
+        "rank": 26.0, 
+        "households": 102602, 
+        "kw_per_household": 0.031744020584394066, 
+        "LA_name": "Aberdeen City"
+    }, 
+    {
+        "total_capacity": 2360.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00RC", 
+        "rank": 27.0, 
+        "households": 82236, 
+        "kw_per_household": 0.02869789386643319, 
+        "LA_name": "Renfrewshire"
+    }, 
+    {
+        "total_capacity": 4033.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QZ", 
+        "rank": 28.0, 
+        "households": 148400, 
+        "kw_per_household": 0.027176549865229112, 
+        "LA_name": "North Lanarkshire"
+    }, 
+    {
+        "total_capacity": 1829.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QJ", 
+        "rank": 29.0, 
+        "households": 72946, 
+        "kw_per_household": 0.02507334192416308, 
+        "LA_name": "Dundee City"
+    }, 
+    {
+        "total_capacity": 895.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QU", 
+        "rank": 30.0, 
+        "households": 38830, 
+        "kw_per_household": 0.023049188771568373, 
+        "LA_name": "Inverclyde"
+    }, 
+    {
+        "total_capacity": 3316.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QP", 
+        "rank": 31.0, 
+        "households": 234091, 
+        "kw_per_household": 0.014165431392065478, 
+        "LA_name": "Edinburgh City of"
+    }, 
+    {
+        "total_capacity": 3656.0, 
+        "percent_fuel_poor": null, 
+        "LA_id": "00QS", 
+        "rank": 32.0, 
+        "households": 296383, 
+        "kw_per_household": 0.012335390356396959, 
+        "LA_name": "Glasgow City"
+    }
+]
