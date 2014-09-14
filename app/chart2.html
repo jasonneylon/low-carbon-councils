@@ -19,9 +19,9 @@ $.getJSON('data/regions/London.json', function(data) {
 });
 $.ajaxSetup({async: true});
         
-function renderChart() {
+function renderChart(data, maxValue) {
 
-var data = RegionData;
+//var data = RegionData;
 //var data = d3.csv.parse(d3.select('#csv').text());
 
 var valueLabelWidth = 40; // space reserved for value labels (right)
@@ -40,7 +40,8 @@ var barValue = function(d) { return parseFloat(d['kw_per_household']); };
 var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);
 var y = function(d, i) { return yScale(i); };
 var yText = function(d, i) { return y(d, i) + yScale.rangeBand() / 2; };
-var x = d3.scale.linear().domain([0, d3.max(data, barValue)]).range([0, maxBarWidth]);
+var x = d3.scale.linear().domain([0, maxValue]).range([0, maxBarWidth]);
+//var x = d3.scale.linear().domain([0, d3.max(data, barValue)]).range([0, maxBarWidth]);
 // svg container element
 var chart = d3.select('#chart').append("svg")
   .attr('width', maxBarWidth + barLabelWidth + valueLabelWidth)
@@ -81,6 +82,9 @@ barsContainer.selectAll("text").data(data).enter().append("text")
 }
     </script>
 
-    <script>renderChart();</script>
+    <script>
+        var partData = RegionData.slice(Math.max(RegionData.length - 5, 1))
+        renderChart(partData, d3.max(RegionData, function(d) { return d['kw_per_household']; }));
+    </script>
   </body>
 </html>
