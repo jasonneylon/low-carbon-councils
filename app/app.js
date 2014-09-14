@@ -8,7 +8,8 @@ angular.module('myApp', [
   'myApp.council',
   'myApp.version',
   'regionServices',
-  'leaflet-directive'
+  'leaflet-directive',
+  'ordinal'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/uk'});
