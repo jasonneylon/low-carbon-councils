@@ -22,8 +22,6 @@ angular.module('myApp', [
   'myApp.council',
   'myApp.version',
   'regionServices',
-  'councilServices',
-  'countryServices',
   'leaflet-directive',
   'ordinal'
 ]).
@@ -63,7 +61,7 @@ config(['$routeProvider', function($routeProvider) {
 
   info.update = function (feature) {
     this._div.innerHTML = '<h4>UK Renewables Data</h4>' +  (feature ?
-      '<b>' + feature.properties.name + '</b><br />' + getValue(RegionData[feature.id]) + ' kW per household</sup>'
+      '<b>' + feature.properties.name + '</b><br />' + getValue(RegionData[feature.id]) + ' kW<sup>2</sup>'
       : 'Hover over a county');
   };
 
@@ -130,7 +128,7 @@ config(['$routeProvider', function($routeProvider) {
   function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
     console.log(e.target.feature);
-    window.location.href= '#/council/' + e.target.feature.id;
+    window.location.href= '#/council/London/' + e.target.feature.id;
     // console.log("moved?", $location)
   }
 
