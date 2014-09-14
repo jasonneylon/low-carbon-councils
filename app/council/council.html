@@ -6,7 +6,7 @@
     </h1>
 
       <div style="text-align: center">
-        <strong style="font-size: 72pt">{{council.rank | ordinal}}</strong>
+        <strong style="font-size: 72pt">{{council.regional_rank | ordinal}}</strong>
         <br/>
         out of 
         <br/>
@@ -29,7 +29,7 @@
         <h3 class="panel-title">One to beat</h3>
       </div>
       <div class="panel-body">
-        <a href="#/council/{{regionName}}/{{council.LA_id}}">{{best_council.LA_name}}</a>
+        <a href="#/council/{{council.LA_id}}">{{best_council.LA_name}}</a>
       </div>
     </div>
 
@@ -49,7 +49,7 @@
         </dl>
         <dl>
           <dt>Rank</dt>
-          <dd>{{council.rank | ordinal }}</dd>
+          <dd>{{council.regional_rank | ordinal }}</dd>
         </dl>
         <dl>
           <dt>Households</dt>

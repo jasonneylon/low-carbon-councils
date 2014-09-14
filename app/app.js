@@ -22,6 +22,7 @@ angular.module('myApp', [
   'myApp.council',
   'myApp.version',
   'regionServices',
+  'councilServices',
   'leaflet-directive',
   'ordinal'
 ]).
@@ -128,7 +129,7 @@ config(['$routeProvider', function($routeProvider) {
   function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
     console.log(e.target.feature);
-    window.location.href= '#/council/London/' + e.target.feature.id;
+    window.location.href= '#/council/' + e.target.feature.id;
     // console.log("moved?", $location)
   }
 
