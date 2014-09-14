@@ -3,22 +3,25 @@
 angular.module('myApp.council', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/council/:region/:laId', {
+  $routeProvider.when('/council/:laId', {
     templateUrl: 'council/council.html',
     controller: 'CouncilCtrl'
   });
 }])
 
-.controller('CouncilCtrl', ['$scope', '$routeParams', '$http','Region',
-  function($scope, $routeParams, $http, Region) {
-    Region.query({name: $routeParams.region}, function(region) {
-      $scope.council = _(region).find({ LA_id: $routeParams.laId });
-      $scope.council_count = region.length;
-      $scope.best_council = _(region).min("rank").value();
-      console.log($scope.best_council);
+.controller('CouncilCtrl', ['$scope', '$routeParams', '$http','Council', 'Region',
+  function($scope, $routeParams, $http, Council, Region) {
+
+    Council.get({id: $routeParams.laId}, function(council) {
+      $scope.council = council;
+      $scope.regionName = $scope.region = council.region;
+  
+      Region.query({name: council.region}, function(region) {
+        $scope.council_count = region.length;
+        $scope.best_council = _(region).min("regional_rank").value();
+      });
     });
 
-    $scope.regionName = $scope.region = $routeParams.region
 
    // $http.get("data/maps/2490.geojson").success(function(data, status) {
    //    var point = data.coordinates[0][0];

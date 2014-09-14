@@ -19,7 +19,11 @@
         <h3 class="panel-title">Top 5 councils in the UK</h3>
       </div>
       <div class="panel-body">
-        Todo
+        <ul class="list-unstyled">
+          <li ng-repeat="council in top_councils">
+            <a href="#/council/{{council.LA_id}}">{{council.LA_name}}</a>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -28,7 +32,11 @@
         <h3 class="panel-title">Bottom 5 councils in the UK</h3>
       </div>
       <div class="panel-body">
-        Todo
+        <ul class="list-unstyled">
+          <li ng-repeat="council in bottom_councils">
+            <a href="#/council/{{council.LA_id}}">{{council.LA_name}}</a>
+          </li>
+        </ul>
       </div>
     </div>
 
