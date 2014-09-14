@@ -169,6 +169,7 @@ config(['$routeProvider', function($routeProvider) {
 
   legend.addTo(map);
 
+
 }]);
 
 
