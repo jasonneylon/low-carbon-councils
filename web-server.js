@@ -1,5 +1,8 @@
 var express = require("express"),
-  path = require("path");
+  url = require('url'),
+  path = require("path"),
+  http = require("http"),
+  httpProxy = require('http-proxy');
 // var logfmt = require("logfmt");
 var app = express();
 
@@ -12,9 +15,25 @@ app.use(express.static(__dirname + '/app'));
 // });
 
 app.get('/postcode', function(req, res){
-            res.type('text/plain');
-            res.send('Getting by postcode');
+  res.type('text/plain');
+  res.send('Getting by postcode');
 });
+
+app.get("/data/*", function(req, res) {
+
+  var path = url.parse(req.url).pathname;
+  http.request("http://low-carbon-councils.herokuapp.com" + path).on('response', function(response) {
+    var data = '';
+    response.on("data", function (chunk) {
+        data += chunk;
+    });
+    response.on('end', function () {
+        res.write(data);
+        res.end();
+    });
+  }).end();
+
+})
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
