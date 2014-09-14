@@ -11,6 +11,11 @@ app.use(express.static(__dirname + '/app'));
 //   res.send('<h1>Low carbon councils</h1>');
 // });
 
+app.get('/postcode', function(req, res){
+            res.type('text/plain');
+            res.send('Getting by postcode');
+});
+
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
   console.log("Listening on " + port);
