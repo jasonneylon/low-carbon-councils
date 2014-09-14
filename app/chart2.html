@@ -8,21 +8,33 @@
   <body>
     <div id="chart"></div>
     <script src="http://d3js.org/d3.v2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script>
+var RegionData;
+
+$.ajaxSetup({async: false});
+$.getJSON('data/regions/London.json', function(data) {
+    //alert("Data Loaded: " + data);
+    RegionData = data;
+});
+$.ajaxSetup({async: true});
+        
 function renderChart() {
 
-var data = d3.csv.parse(d3.select('#csv').text());
+var data = RegionData;
+//var data = d3.csv.parse(d3.select('#csv').text());
+
 var valueLabelWidth = 40; // space reserved for value labels (right)
 var barHeight = 20; // height of one bar
-var barLabelWidth = 100; // space reserved for bar labels
+var barLabelWidth = 200; // space reserved for bar labels
 var barLabelPadding = 5; // padding between bar and bar labels (left)
 var gridLabelHeight = 18; // space reserved for gridline labels
 var gridChartOffset = 3; // space between start of grid and first bar
-var maxBarWidth = 420; // width of the bar with the max value
+var maxBarWidth = 120; // width of the bar with the max value
  
 // accessor functions 
-var barLabel = function(d) { return d['Name']; };
-var barValue = function(d) { return parseFloat(d['Population (mill)']); };
+var barLabel = function(d) { return d['LA_name']; };
+var barValue = function(d) { return parseFloat(d['kw_per_household']); };
  
 // scales
 var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);
