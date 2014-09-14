@@ -47,24 +47,34 @@ config(['$routeProvider', function($routeProvider) {
 
   info.update = function (feature) {
     this._div.innerHTML = '<h4>UK Renewables Data</h4>' +  (feature ?
-      '<b>' + feature.properties.name + '</b><br />' + (RegionData[feature.id].pv.total) + ' kWh<sup>2</sup>'
+      '<b>' + feature.properties.name + '</b><br />' + getValue(RegionData[feature.id]) + ' kW<sup>2</sup>'
       : 'Hover over a county');
   };
 
   info.addTo(map);
 
-  // get color depending on population density value
-  function getColor(d) {
-                      var range = 10000/1000;
-    return d > 1000*range ? '#800026' :
-           d > 500*range  ? '#BD0026' :
-           d > 200*range  ? '#E31A1C' :
-           d > 100*range  ? '#FC4E2A' :
-           d > 50*range   ? '#FD8D3C' :
-           d > 20*range   ? '#FEB24C' :
-           d > 10*range   ? '#FED976' :
-                      '#FFEDA0';
-  }
+    // Calculate the value to be displayed - taken from the feature data
+    function getValue(f) {
+        //var calc = (f.pv.total+f.wind.total+f.chp.total)/f.households*10000;
+        var calc = (f.kw_per_household).toFixed(2);
+        return eval(calc);
+    }
+
+    var range = 1;
+    var grades = [0, 1, 2, 5, 10, 20, 50, 100];
+
+    // get color depending on population density value
+    function getColor(v) {
+            d = v * 100 / range;
+            return d > grades[7]  ? '#800026' :
+                   d > grades[6]  ? '#BD0026' :
+                   d > grades[5]  ? '#E31A1C' :
+                   d > grades[4]  ? '#FC4E2A' :
+                   d > grades[3]  ? '#FD8D3C' :
+                   d > grades[2]  ? '#FEB24C' :
+                   d > grades[1]  ? '#FED976' :
+                              '#FFEDA0';
+    }
 
   function style(feature) {
     return {
@@ -73,7 +83,7 @@ config(['$routeProvider', function($routeProvider) {
       color: 'grey',
       //dashArray: '3',
       fillOpacity: 0.5,
-      fillColor: getColor(RegionData[feature.id].pv.total)
+      fillColor: getColor(getValue(RegionData[feature.id]))
     };
   }
   function highlightFeature(e) {
@@ -124,18 +134,16 @@ config(['$routeProvider', function($routeProvider) {
   var legend = L.control({position: 'bottomright'});
 
   legend.onAdd = function (map) {
-    var range = 10000/1000;
     var div = L.DomUtil.create('div', 'info legend'),
-      grades = [0*range, 10*range, 20*range, 50*range, 100*range, 200*range, 500*range, 1000*range],
       labels = [],
       from, to;
 
     for (var i = 0; i < grades.length; i++) {
-      from = grades[i];
-      to = grades[i + 1];
+      from = grades[i]/100*range;
+      to = grades[i + 1]/100*range;
 
       labels.push(
-        '<i style="background:' + getColor(from + 1) + '"></i> ' +
+        '<i style="background:' + getColor(from + 0.001) + '"></i> ' +
         from + (to ? '&ndash;' + to : '+'));
     }
 
