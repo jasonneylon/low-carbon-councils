@@ -13,6 +13,8 @@ angular.module('myApp.uk', ['ngRoute'])
   function($scope, $routeParams, $http, $location, Country) {
     $scope.regions =  [
       { name: "London", id: "London"},
+      { name: "South West", id: "South_West"},
+      { name: "South East", id: "South_East"},
       { name: "North West", id: "North_West"},
       { name: "North East", id: "North_East"},
       { name: "Scotland", id: "Scotland"},
