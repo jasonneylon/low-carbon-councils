@@ -20,30 +20,30 @@ angular.module('myApp.council', ['ngRoute'])
 
     $scope.regionName = $scope.region = $routeParams.region
 
-   $http.get("data/maps/2490.geojson").success(function(data, status) {
-      var point = data.coordinates[0][0];
-      // a bit of centering map 
-      angular.extend($scope, {
-          center: {
-            lat: point[1] + 0.04,
-            lng: point[0] - 0.04,
-            zoom: 10
-          },
-          geojson: {
-              data: data,
-              resetStyleOnMouseout: true
-          }
-      });
-    });
+   // $http.get("data/maps/2490.geojson").success(function(data, status) {
+   //    var point = data.coordinates[0][0];
+   //    // a bit of centering map 
+   //    angular.extend($scope, {
+   //        center: {
+   //          lat: point[1] + 0.04,
+   //          lng: point[0] - 0.04,
+   //          zoom: 10
+   //        },
+   //        geojson: {
+   //            data: data,
+   //            resetStyleOnMouseout: true
+   //        }
+   //    });
+   //  });
 
-     angular.extend($scope, {
-        center: {
-          lat: 51.45,
-          lng: -0.12,
-          zoom: 10
-        },
-        defaults: {
-            scrollWheelZoom: false
-        }
-    });
+   //   angular.extend($scope, {
+   //      center: {
+   //        lat: 51.45,
+   //        lng: -0.12,
+   //        zoom: 10
+   //      },
+   //      defaults: {
+   //          scrollWheelZoom: false
+   //      }
+   //  });
   }]);
