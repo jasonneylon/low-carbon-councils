@@ -62,7 +62,7 @@ config(['$routeProvider', function($routeProvider) {
   };
 
   info.update = function (feature) {
-    this._div.innerHTML = '<h4>Great Britain Renewables Data</h4>' +  (feature ?
+    this._div.innerHTML = '<h4>Renewables Data</h4>' +  (feature ?
       '<b>' + feature.properties.name + '</b><br />' + getValue(RegionData[feature.id]) + ' kW per household</sup>'
       : 'Hover over a county');
   };
