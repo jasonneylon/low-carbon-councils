@@ -41,7 +41,7 @@ config(['$routeProvider', function($routeProvider) {
     //alert("Data var: " + RegionData);
     //alert("Data Extract: " + RegionData["23UB"].pv.total);
     
-    var map = L.map('map').setView([53.0, -1.5], 6);
+    var map = L.map('map').setView([54.9, -1.5], 6);
 
   L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
     maxZoom: 18,
