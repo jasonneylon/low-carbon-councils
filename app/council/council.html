@@ -59,11 +59,36 @@
       <div class="panel-body">
         <dl>
           <dt>Total Capacity</dt>
-          <dd>{{council.total_capacity | number:0}}</dd>
+          <dd>{{council["total_capacity"] | number:0}}</dd>
         </dl>
         <dl>
           <dt>Households</dt>
-          <dd>{{council.households | number:0}}</dd>
+          <dd>{{council["households"] | number:0}}</dd>
+        </dl>
+        <dl>
+          <dt>Percentage in fuel poverty</dt>
+          <dd>{{council["percent_fuel_poor"] | number:0}}%</dd>
+        </dl>
+        <dl>
+          <dt>National rank</dt>
+          <dd>{{council["national_rank"] | number:0}}</dd>
+        </dl>
+
+        <dl>
+          <dt>Solar PV total</dt>
+          <dd>{{council["pv_total"] | number:0}}</dd>
+        </dl>
+        <dl>
+          <dt>Anaerobic total</dt>
+          <dd>{{council["anaerobic_total"] | number:0}}</dd>
+        </dl>
+        <dl>
+          <dt>CHP total</dt>
+          <dd>{{council["chp_total"] | number:0}}</dd>
+        </dl>
+        <dl>
+          <dt>Hydro total</dt>
+          <dd>{{council["hydro_total"] | number:0}}</dd>
         </dl>
       </div>
     </div>
