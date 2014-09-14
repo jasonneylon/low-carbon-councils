@@ -36,19 +36,30 @@
       </div>
     </div>
 
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Have your say in {{council.LA_name}}</h3>
+      </div>
+      <div class="panel-body">
+          Your council works for you. If you think they could be doing more to encourage renewable energy, let them know!
+          <br/>
+          <a class="btn btn-primary">Tweet your council</a>
+          <br/>
+          <br/>
+          <a class="btn btn-primary">Email your councillors</a>
+
+      </div>
+    </div>
+
 
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Detailed stats</h3>
+        <h3 class="panel-title">Detailed statistics</h3>
       </div>
       <div class="panel-body">
         <dl>
           <dt>Total Capacity</dt>
           <dd>{{council.total_capacity | number:0}}</dd>
-        </dl>
-        <dl>
-          <dt>Rank</dt>
-          <dd>{{council.regional_rank | ordinal }}</dd>
         </dl>
         <dl>
           <dt>Households</dt>

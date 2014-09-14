@@ -1,42 +1,20 @@
   <div class="col-md-4">
-    <div class="panel">
-        <div class="alert alert-warning" role="alert">Search doesn't work just yet :)</div>
-
-      <form class="form-inline" role="form">
-        <div class="form-group">
-          <label class="sr-only" for="exampleInputPassword2">Postcode</label>
-          <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Your postcode">
-        </div>
-
-        <button type="submit" class="btn btn-primary">
-          <span class="glyphicon glyphicon-search"></span>
-          Search</button>
-      </form>
-    </div>    
 
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Top 5 councils in the UK</h3>
+        <h3 class="panel-title">Top 5 councils in the Great Britain</h3>
       </div>
       <div class="panel-body">
-        <ul class="list-unstyled">
-          <li ng-repeat="council in top_councils">
-            <a href="#/council/{{council.LA_id}}">{{council.LA_name}}</a>
-          </li>
-        </ul>
+        <div id="chartTop"></div>
       </div>
     </div>
 
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Bottom 5 councils in the UK</h3>
+        <h3 class="panel-title">Bottom 5 councils in the Great Britain</h3>
       </div>
       <div class="panel-body">
-        <ul class="list-unstyled">
-          <li ng-repeat="council in bottom_councils">
-            <a href="#/council/{{council.LA_id}}">{{council.LA_name}}</a>
-          </li>
-        </ul>
+        <div id="chartBottom"></div>
       </div>
     </div>
 
