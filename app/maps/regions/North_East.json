@@ -1,0 +1,110 @@
+[
+    {
+        "total_capacity": 16839.0, 
+        "percent_fuel_poor": 11.800000000000001, 
+        "LA_id": "00EM", 
+        "rank": 1.0, 
+        "households": 145936, 
+        "kw_per_household": 0.11538619668895954, 
+        "LA_name": "Northumberland"
+    }, 
+    {
+        "total_capacity": 11382.0, 
+        "percent_fuel_poor": 11.699999999999999, 
+        "LA_id": "00CM", 
+        "rank": 2.0, 
+        "households": 122587, 
+        "kw_per_household": 0.09284834444109082, 
+        "LA_name": "Sunderland"
+    }, 
+    {
+        "total_capacity": 21032.0, 
+        "percent_fuel_poor": 11.4, 
+        "LA_id": "00EJ", 
+        "rank": 3.0, 
+        "households": 231331, 
+        "kw_per_household": 0.09091734354669283, 
+        "LA_name": "County Durham"
+    }, 
+    {
+        "total_capacity": 7205.0, 
+        "percent_fuel_poor": 9.6999999999999993, 
+        "LA_id": "00CK", 
+        "rank": 4.0, 
+        "households": 93415, 
+        "kw_per_household": 0.07712894074827384, 
+        "LA_name": "North Tyneside"
+    }, 
+    {
+        "total_capacity": 6184.0, 
+        "percent_fuel_poor": 10.300000000000001, 
+        "LA_id": "00EF", 
+        "rank": 5.0, 
+        "households": 81841, 
+        "kw_per_household": 0.07556114905731846, 
+        "LA_name": "Stockton-on-Tees"
+    }, 
+    {
+        "total_capacity": 2543.0, 
+        "percent_fuel_poor": 11.6, 
+        "LA_id": "00EB", 
+        "rank": 6.0, 
+        "households": 41275, 
+        "kw_per_household": 0.06161114476075106, 
+        "LA_name": "Hartlepool"
+    }, 
+    {
+        "total_capacity": 2790.0, 
+        "percent_fuel_poor": 11.800000000000001, 
+        "LA_id": "00EH", 
+        "rank": 7.0, 
+        "households": 48131, 
+        "kw_per_household": 0.057966798944547177, 
+        "LA_name": "Darlington"
+    }, 
+    {
+        "total_capacity": 3455.0, 
+        "percent_fuel_poor": 11.4, 
+        "LA_id": "00EE", 
+        "rank": 8.0, 
+        "households": 61288, 
+        "kw_per_household": 0.056373188878736456, 
+        "LA_name": "Redcar and Cleveland"
+    }, 
+    {
+        "total_capacity": 3297.0, 
+        "percent_fuel_poor": 11.0, 
+        "LA_id": "00CL", 
+        "rank": 9.0, 
+        "households": 69686, 
+        "kw_per_household": 0.04731222914215194, 
+        "LA_name": "South Tyneside"
+    }, 
+    {
+        "total_capacity": 2681.0, 
+        "percent_fuel_poor": 15.1, 
+        "LA_id": "00EC", 
+        "rank": 10.0, 
+        "households": 60237, 
+        "kw_per_household": 0.044507528595381575, 
+        "LA_name": "Middlesbrough"
+    }, 
+    {
+        "total_capacity": 4961.0, 
+        "percent_fuel_poor": 13.4, 
+        "LA_id": "00CJ", 
+        "rank": 11.0, 
+        "households": 121018, 
+        "kw_per_household": 0.0409939017336264, 
+        "LA_name": "Newcastle upon Tyne"
+    }, 
+    {
+        "total_capacity": 3220.0, 
+        "percent_fuel_poor": 11.0, 
+        "LA_id": "00CH", 
+        "rank": 12.0, 
+        "households": 92247, 
+        "kw_per_household": 0.03490628421520483, 
+        "LA_name": "Gateshead"
+    }
+]
