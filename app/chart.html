@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: blue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: black;
+}
+
+</style>
+<div class="chart"></div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+
+var RegionData;
+
+$.ajaxSetup({async: false});
+$.getJSON('data/regions/London.json', function(data) {
+    //alert("Data Loaded: " + data);
+    RegionData = data;
+});
+$.ajaxSetup({async: true});
+//alert("Rank data:" RegionData(2).rank);
+
+var data = [4, 8, 15, 16, 23, 42];
+
+var x = d3.scale.linear()
+    .domain([0, 0.5]) //d3.max(data)]) //RegionData.kw_per_household
+    .range([0, 420]);
+
+d3.select(".chart")
+  .selectAll("div")
+  .data(RegionData)
+  .enter()
+    .append("div")
+        .style("width", function(d) { return x(d.kw_per_household) + "px"; })
+    .append("text")
+        .attr("x", function(d) { return x(d.kw_per_household) + "px"; })
+    .text(function(d) { return d.LA_name; })
+    ;
+
+</script>
