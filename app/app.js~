@@ -61,7 +61,7 @@ config(['$routeProvider', function($routeProvider) {
 
   info.update = function (feature) {
     this._div.innerHTML = '<h4>UK Renewables Data</h4>' +  (feature ?
-      '<b>' + feature.properties.name + '</b><br />' + getValue(RegionData[feature.id]) + ' kW per household</sup>'
+      '<b>' + feature.properties.name + '</b><br />' + getValue(RegionData[feature.id]) + ' kW<sup>2</sup>'
       : 'Hover over a county');
   };
 
