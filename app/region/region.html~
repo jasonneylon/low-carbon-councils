@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-md-8">
+    <leaflet center="center" geojson="geojson" width="720px" height="540px"></leaflet>
+  </div>
+  <div class="col-md-4">
+
+    <div class="panel">
+        <div class="alert alert-warning" role="alert">Search doesn't work just yet :)</div>
+
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputPassword2">Postcode</label>
+          <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Your postcode">
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          <span class="glyphicon glyphicon-search"></span>
+          Search</button>
+      </form>
+    </div>    
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Top 5 councils in {{regionName}}</h3>
+      </div>
+      <div class="panel-body">
+        <ul class="list-unstyled">
+          <li ng-repeat="council in region | limitTo: 5">
+            {{council.rank}}: <a href="#/council/{{regionName}}/{{council.LA_id}}">{{council.LA_name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Bottom 5 councils in {{regionName}}</h3>
+      </div>
+      <div class="panel-body">
+      <ul class="list-unstyled">
+        <li ng-repeat="council in region | limitTo: -5">
+          {{council.rank}}: <a href="#/council/{{regionName}}/{{council.LA_id}}">{{council.LA_name}}</a>
+        </li>
+      </ul>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">How do we rank councils?</h3>
+      </div>
+      <div class="panel-body">
+        Todo...
+      </div>
+    </div>
+
+
+  </div>
+</div>

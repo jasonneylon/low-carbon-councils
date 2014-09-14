@@ -1,26 +1,22 @@
-<h2>How does your council stack up?</h2>
-<div class="row">
-  <div class="col-md-8">
+  <div class="col-md-4">
     <h1>
       {{council.LA_name}}
       <small>{{region}}</small>
     </h1>
-    <div class="row"> 
-      <div class="col-md-6">
-        <leaflet center="center" geojson="geojson" width="300px" height="300px"></leaflet>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+      <div style="text-align: center">
+        <strong style="font-size: 72pt">{{council.regional_rank | ordinal}}</strong>
+        <br/>
+        out of 
+        <br/>
+        <strong style="font-size: 72pt">{{council_count}}</strong>
+        <br/>
+        in the {{region}} region
       </div>
-      <div class="col-md-6">
-        <div style="text-align: center">
-          <strong style="font-size: 72pt">{{council.rank | ordinal}}</strong>
-          <br/>
-          out of 
-          <br/>
-          <strong style="font-size: 72pt">{{council_count}}</strong>
-        </div>
-      </div>
-    </div>  
-  </div>
-  <div class="col-md-4">
+    </div>
+
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">Why this matters?</h3>
@@ -36,7 +32,7 @@
         <h3 class="panel-title">One to beat</h3>
       </div>
       <div class="panel-body">
-        <a href="#/council/{{regionName}}/{{council.LA_id}}">{{best_council.LA_name}}</a>
+        <a href="#/council/{{best_council.LA_id}}">{{best_council.LA_name}}</a>
       </div>
     </div>
 
@@ -51,12 +47,8 @@
           <dd>{{council.total_capacity | number:0}}</dd>
         </dl>
         <dl>
-          <dt>KW per household</dt>
-          <dd>{{council.kw_per_household | number:3}} KW</dd>
-        </dl>
-        <dl>
           <dt>Rank</dt>
-          <dd>{{council.rank | ordinal }}</dd>
+          <dd>{{council.regional_rank | ordinal }}</dd>
         </dl>
         <dl>
           <dt>Households</dt>
@@ -65,6 +57,4 @@
       </div>
     </div>
   </div>
-
-</div>
 

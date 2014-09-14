@@ -57,7 +57,12 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-        <div ng-view></div>
+    <div class="row">
+      <div class="col-md-8">
+        <div id="map"></div>
+      </div>
+          <div ng-view></div>
+      </div>
       </div>
 
     </div><!-- /.container -->
@@ -66,6 +71,8 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -81,5 +88,6 @@
   <script src="components/version/interpolate-filter.js"></script>
   <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
   <script src="/vendor/angular-leaflet-directive.min.js"></script>
+  <script type="text/javascript" src="maps/Local_Authority_leaflet.js"></script>
 </body>
 </html>
