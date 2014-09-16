@@ -30,18 +30,7 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/uk'});
 
-  var RegionData = {}
-
-    $.ajaxSetup({async: false});
-    $.getJSON('data/UK.json', function(data) {
-        //alert("Data Loaded: " + data);
-        RegionData = data;
-    });
-    $.ajaxSetup({async: true});
-    //alert("Data var: " + RegionData);
-    //alert("Data Extract: " + RegionData["23UB"].pv.total);
-    
-    var map = L.map('map').setView([54.9, -1.5], 6);
+  var map = L.map('map').setView([54.9, -1.5], 6);
 
   L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
     maxZoom: 18,
@@ -51,7 +40,20 @@ config(['$routeProvider', function($routeProvider) {
     id: 'examples.map-20v6611k'
   }).addTo(map);
 
+  var RegionData = {}
 
+  $.ajaxSetup({async: false});
+  $.getJSON('data/uk', function(data) {
+      RegionData = data;
+  });
+  $.ajaxSetup({async: true});
+    //alert("Data var: " + RegionData);
+
+
+  function getRegionById(id) {
+    return _.find(RegionData, {"LA_id": id});
+  }
+    
   // control that shows state info on hover
   var info = L.control();
 
@@ -62,46 +64,61 @@ config(['$routeProvider', function($routeProvider) {
   };
 
   info.update = function (feature) {
+    if (!_.isObject(feature)) {
+      return;
+    }
+    var region = getRegionById(feature.id);
     this._div.innerHTML = '<h4>Renewables Data</h4>' +  (feature ?
-      '<b>' + feature.properties.name + '</b><br />' + getValue(RegionData[feature.id]) + ' kW per household</sup>'
+      '<b>' + feature.properties.name + '</b><br />' + getValue(region) + ' kW per household</sup>'
       : 'Hover over a county');
   };
 
   info.addTo(map);
 
-    // Calculate the value to be displayed - taken from the feature data
-    function getValue(f) {
-        //var calc = (f.pv.total+f.wind.total+f.chp.total)/f.households*10000;
-        var calc = (f.kw_per_household).toFixed(2);
-        return eval(calc);
+  // Calculate the value to be displayed - taken from the feature data
+  function getValue(f) {
+    if (!_.has(f, "kw_per_household"))
+    {
+      console.warn("Map is missing kw_per_household data");
+      return 0;
     }
+    //var calc = (f.pv.total+f.wind.total+f.chp.total)/f.households*10000;
+    var calc = (f.kw_per_household).toFixed(2);
+    return eval(calc);
+  }
 
-    var range = 1;
-    var grades = [0, 1, 2, 5, 10, 20, 50, 100];
+  var range = 1;
+  var grades = [0, 1, 2, 5, 10, 20, 50, 100];
 
-    // get color depending on population density value
-    function getColor(v) {
-            var d = v * 100 / range;
-            return d > grades[7]  ? '#800026' :
-                   d > grades[6]  ? '#BD0026' :
-                   d > grades[5]  ? '#E31A1C' :
-                   d > grades[4]  ? '#FC4E2A' :
-                   d > grades[3]  ? '#FD8D3C' :
-                   d > grades[2]  ? '#FEB24C' :
-                   d > grades[1]  ? '#FED976' :
-                              '#FFEDA0';
-    }
+  // get color depending on population density value
+  function getColor(v) {
+    var d = v * 100 / range;
+    return d > grades[7]  ? '#800026' :
+           d > grades[6]  ? '#BD0026' :
+           d > grades[5]  ? '#E31A1C' :
+           d > grades[4]  ? '#FC4E2A' :
+           d > grades[3]  ? '#FD8D3C' :
+           d > grades[2]  ? '#FEB24C' :
+           d > grades[1]  ? '#FED976' :
+                      '#FFEDA0';
+  }
 
   function style(feature) {
+    if (feature === null) {
+      return; 
+    }
+    debugger;
+    var kw_per_household = getValue(getRegionById(feature.id));
     return {
       weight: 0.5,
       opacity: 1,
       color: 'grey',
       //dashArray: '3',
       fillOpacity: 0.5,
-      fillColor: getColor(getValue(RegionData[feature.id]))
+      fillColor: getColor(kw_per_household)
     };
   }
+
   function highlightFeature(e) {
 
     var layer = e.target;
@@ -129,7 +146,6 @@ config(['$routeProvider', function($routeProvider) {
 
   function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
-    console.log(e.target.feature);
     window.location.href= '#/council/' + e.target.feature.id;
     // console.log("moved?", $location)
   }
@@ -169,7 +185,4 @@ config(['$routeProvider', function($routeProvider) {
 
   legend.addTo(map);
 
-
 }]);
-
-

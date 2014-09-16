@@ -27,11 +27,13 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
+
+    <div class="panel panel-default" ng-if="showbest">
       <div class="panel-heading">
         <h3 class="panel-title">One to beat</h3>
       </div>
       <div class="panel-body">
+        The best council in the {{region}} area is:
         <a href="#/council/{{best_council.LA_id}}">{{best_council.LA_name}}</a>
       </div>
     </div>
@@ -43,11 +45,11 @@
       <div class="panel-body">
           Your council works for you. If you think they could be doing more to encourage renewable energy, let them know!
           <br/>
-          <a class="btn btn-primary" href="http://twitter.com/home?status=Hi @{{council.twitter_username}} I think you should be doing more to promote renewables in {{council.LA_name}}" target="_blank">Tweet your council</a>
-          <br/>
+          <a ng-if="showtweet" class="btn btn-primary" href="http://twitter.com/home?status=Hi @{{council.twitter_username}} I think you should be doing more to promote renewables in {{council.LA_name}}" target="_blank">Tweet your council</a>
+<!--           <br/>
           <br/>
           <a class="btn btn-primary">Email your councillors</a>
-
+ -->
       </div>
     </div>
 
@@ -59,7 +61,7 @@
       <div class="panel-body">
         <dl>
           <dt>Total Capacity</dt>
-          <dd>{{council["total_capacity"] | number:0}}</dd>
+          <dd>{{council["total_capacity"] | number:0}} kW</dd>
         </dl>
         <dl>
           <dt>Households</dt>
@@ -73,25 +75,24 @@
           <dt>National rank</dt>
           <dd>{{council["national_rank"] | number:0}}</dd>
         </dl>
-
         <dl>
-          <dt>Solar PV total</dt>
+          <dt>Solar PV total installations</dt>
           <dd>{{council["pv_total"] | number:0}}</dd>
         </dl>
         <dl>
-          <dt>Wind total</dt>
+          <dt>Wind total installations</dt>
           <dd>{{council["wind_total"] | number:0}}</dd>
         </dl>
         <dl>
-          <dt>Anaerobic total</dt>
+          <dt>Anaerobic total installations</dt>
           <dd>{{council["anaerobic_total"] | number:0}}</dd>
         </dl>
         <dl>
-          <dt>CHP total</dt>
+          <dt>CHP total installations</dt>
           <dd>{{council["chp_total"] | number:0}}</dd>
         </dl>
         <dl>
-          <dt>Hydro total</dt>
+          <dt>Hydro total installations</dt>
           <dd>{{council["hydro_total"] | number:0}}</dd>
         </dl>
       </div>

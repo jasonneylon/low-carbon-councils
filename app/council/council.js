@@ -12,13 +12,18 @@ angular.module('myApp.council', ['ngRoute'])
 .controller('CouncilCtrl', ['$scope', '$routeParams', '$http','Council', 'Region',
   function($scope, $routeParams, $http, Council, Region) {
 
+    $scope.showbest = false;
+    $scope.showtweet = false;
+
     Council.get({id: $routeParams.laId}, function(council) {
       $scope.council = council;
       $scope.regionName = $scope.region = council.region;
-  
+      $scope.showtweet = !_.isEmpty(council.twitter_username);
+
       Region.query({name: council.region}, function(region) {
         $scope.council_count = region.length;
         $scope.best_council = _(region).min("regional_rank").value();
+        $scope.showbest = ($scope.best_council.name !== council.name);
       });
     });
 

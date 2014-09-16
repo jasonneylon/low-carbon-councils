@@ -22,7 +22,9 @@ app.get('/postcode', function(req, res){
 app.get("/data/*", function(req, res) {
 
   var path = url.parse(req.url).pathname;
-  http.request("http://low-carbon-councils.herokuapp.com" + path).on('response', function(response) {
+  var dataUrl = "http://low-carbon-councils.herokuapp.com" + path;
+  console.log("Requesting ", dataUrl);
+  http.request(dataUrl).on('response', function(response) {
     var data = '';
     response.on("data", function (chunk) {
         data += chunk;
