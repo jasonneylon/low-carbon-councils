@@ -90,14 +90,14 @@ config(['$routeProvider', function($routeProvider) {
   // get color depending on population density value
   function getColor(v) {
     var d = v * 100 / range;
-    return d > grades[7]  ? '#8c2d04' :
+    return d > grades[7]  ? '#a63603' :
            d > grades[6]  ? '#d94801' :
            d > grades[5]  ? '#f16913' :
            d > grades[4]  ? '#fd8d3c' :
            d > grades[3]  ? '#fdae6b' :
            d > grades[2]  ? '#fdd0a2' :
            d > grades[1]  ? '#fee6ce' :
-                      '#fff5eb';
+                           '#fff5eb';
   }
 
   function style(feature) {
