@@ -110,7 +110,7 @@ config(['$routeProvider', function($routeProvider) {
       opacity: 1,
       color: 'grey',
       //dashArray: '3',
-      fillOpacity: 0.5,
+      fillOpacity: 0.7,
       fillColor: getColor(kw_per_household)
     };
   }

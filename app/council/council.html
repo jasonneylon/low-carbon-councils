@@ -46,8 +46,12 @@
       <div class="panel-body">
           Your council works for you. If you think they could be doing more to encourage renewable energy, let them know!
           <br/>
-          <a ng-if="showtweet" class="btn btn-primary" href="http://twitter.com/home?status=Hi @{{council.twitter_username}} I think you should be doing more to promote renewables in {{council.LA_name}}" target="_blank">Tweet your council</a>
+          <br/>
+          <div class="btn-group">
+            <a ng-if="showtweet" class="btn btn-primary" href="http://twitter.com/home?status=Hi @{{council.twitter_username}}, http://www.lowcarboncouncils.org.uk ranked you {{council.regional_rank}} of {{council_count}} in {{region}} for renewables!" target="_blank"><i class="fa fa-twitter"></i> Tweet your council</a>
+        </div>
 <!--           <br/>
+
           <br/>
           <a class="btn btn-primary">Email your councillors</a>
  -->
