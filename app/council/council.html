@@ -5,8 +5,7 @@
     </h1>
 
     <div class="panel panel-default">
-      <div class="panel-body">
-      <div style="text-align: center">
+      <div class="panel-body" style="text-align: center">
         <strong style="font-size: 72pt">{{council.regional_rank | ordinal}}</strong>
         <br/>
         out of 
@@ -14,6 +13,8 @@
         <strong style="font-size: 72pt">{{council_count}}</strong>
         <br/>
         in the {{region}} region
+        <br/>
+        {{council.LA_name}} rank {{council["national_rank"] | ordinal}} national wide. 
       </div>
     </div>
 
@@ -70,10 +71,6 @@
         <dl>
           <dt>Percentage in fuel poverty</dt>
           <dd>{{council["percent_fuel_poor"] | number:0}}%</dd>
-        </dl>
-        <dl>
-          <dt>National rank</dt>
-          <dd>{{council["national_rank"] | number:0}}</dd>
         </dl>
         <dl>
           <dt>Solar PV total installations</dt>
