@@ -13,7 +13,6 @@ angular.module('ordinal', []).filter('ordinal', function() {
   return ordinal;
 });
 
-
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
@@ -107,7 +106,6 @@ config(['$routeProvider', function($routeProvider) {
     if (feature === null) {
       return; 
     }
-    debugger;
     var kw_per_household = getValue(getRegionById(feature.id));
     return {
       weight: 0.5,
