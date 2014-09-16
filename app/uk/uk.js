@@ -93,16 +93,14 @@ angular.module('myApp.uk', ['ngRoute'])
       {name: "West Midlands", id: "West Midlands"},
       {name: "East of England", id: "East of England"},
       { name: "Scotland", id: "Scotland"},
-      ];
+    ];
 
 
 
 
     Country.query({}, function(councils) {
-      console.log(councils);
       $scope.top_councils = _(councils).sortBy("national_rank").take(5).value();
       $scope.bottom_councils = _(councils).sortBy("national_rank").reverse().take(5).value();
-      console.log($scope.top_councils);
 
       var partData = _(councils).sortBy("national_rank").take(5).value()
       renderChart('#chartTop', partData, d3.max(councils, function(d) { return d['kw_per_household']; }));

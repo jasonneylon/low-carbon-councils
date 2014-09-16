@@ -23,7 +23,7 @@ angular.module('myApp.council', ['ngRoute'])
       Region.query({name: council.region}, function(region) {
         $scope.council_count = region.length;
         $scope.best_council = _(region).min("regional_rank").value();
-        $scope.showbest = ($scope.best_council.name !== council.name);
+        $scope.showbest = ($scope.best_council.LA_id !== council.LA_id);
       });
     });
 
