@@ -1,6 +1,6 @@
   <div class="col-md-4">
     <h1>
-      {{council.LA_name}}
+      {{council.LA_name}}<br/>
       <small>{{region}}</small>
     </h1>
 
@@ -64,38 +64,38 @@
         <h3 class="panel-title">Detailed statistics</h3>
       </div>
       <div class="panel-body">
-        <dl>
-          <dt>Total Capacity</dt>
-          <dd>{{council["total_capacity"] | number:0}} kW</dd>
-        </dl>
-        <dl>
-          <dt>Households</dt>
-          <dd>{{council["households"] | number:0}}</dd>
-        </dl>
-        <dl>
-          <dt>Percentage in fuel poverty</dt>
-          <dd>{{council["percent_fuel_poor"] | number:0}}%</dd>
-        </dl>
-        <dl>
-          <dt>Solar PV total installations</dt>
-          <dd>{{council["pv_total"] | number:0}}</dd>
-        </dl>
-        <dl>
-          <dt>Wind total installations</dt>
-          <dd>{{council["wind_total"] | number:0}}</dd>
-        </dl>
-        <dl>
-          <dt>Anaerobic total installations</dt>
-          <dd>{{council["anaerobic_total"] | number:0}}</dd>
-        </dl>
-        <dl>
-          <dt>CHP total installations</dt>
-          <dd>{{council["chp_total"] | number:0}}</dd>
-        </dl>
-        <dl>
-          <dt>Hydro total installations</dt>
-          <dd>{{council["hydro_total"] | number:0}}</dd>
-        </dl>
+        <table class="table table-hover">
+          <tbody>
+            <tr>
+              <th>Total Capacity</th>
+              <td>{{council["total_capacity"] | number:0}} kW</td>
+            </tr>
+            <tr>
+              <th>Percentage in fuel poverty</th>
+              <td>{{council["percent_fuel_poor"] | number:0}}%</td>
+            </tr>
+            <tr>
+              <th>Solar PV total installations</th>
+              <td>{{council["pv_total"] | number:0}}</td>
+            </tr>
+            <tr>
+              <th>Wind total installations</th>
+              <td>{{council["wind_total"] | number:0}}</td>
+            </tr>
+            <tr>
+              <th>Anaerobic total installations</th>
+              <td>{{council["anaerobic_total"] | number:0}}</td>
+            </tr>
+            <tr>
+              <th>CHP total installations</th>
+              <td>{{council["chp_total"] | number:0}}</td>
+            </tr>
+            <tr>
+              <th>Hydro total installations</th>
+              <td>{{council["hydro_total"] | number:0}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
