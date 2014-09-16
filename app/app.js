@@ -19,11 +19,9 @@ angular.module('myApp', [
   'myApp.uk',
   'myApp.region',
   'myApp.council',
-  'myApp.version',
   'regionServices',
   'councilServices',
   'countryServices',
-  'leaflet-directive',
   'ordinal'
 ]).
 config(['$routeProvider', function($routeProvider) {
