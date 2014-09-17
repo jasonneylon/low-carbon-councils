@@ -14,7 +14,7 @@
         <br/>
         in the {{region}} region
         <br/>
-        {{council.LA_name}} rank {{council["national_rank"] | ordinal}} national wide. 
+        {{council.LA_name}} ranks {{council["national_rank"] | ordinal}} nation wide. 
       </div>
     </div>
 
@@ -63,40 +63,42 @@
       <div class="panel-heading">
         <h3 class="panel-title">Detailed statistics</h3>
       </div>
-      <div class="panel-body">
-        <table class="table table-hover">
-          <tbody>
-            <tr>
-              <th>Total Capacity</th>
-              <td>{{council["total_capacity"] | number:0}} kW</td>
-            </tr>
-            <tr>
-              <th>Percentage in fuel poverty</th>
-              <td>{{council["percent_fuel_poor"] | number:0}}%</td>
-            </tr>
-            <tr>
-              <th>Solar PV total installations</th>
-              <td>{{council["pv_total"] | number:0}}</td>
-            </tr>
-            <tr>
-              <th>Wind total installations</th>
-              <td>{{council["wind_total"] | number:0}}</td>
-            </tr>
-            <tr>
-              <th>Anaerobic total installations</th>
-              <td>{{council["anaerobic_total"] | number:0}}</td>
-            </tr>
-            <tr>
-              <th>CHP total installations</th>
-              <td>{{council["chp_total"] | number:0}}</td>
-            </tr>
-            <tr>
-              <th>Hydro total installations</th>
-              <td>{{council["hydro_total"] | number:0}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table class="table table-hover">
+        <tbody>
+          <tr>
+            <th>Total Capacity</th>
+            <td>{{council["total_capacity"] | number:0}} kW</td>
+          </tr>
+          <tr>
+            <th>Households</th>
+            <td>{{council["households"] | number:0}}</td>
+          </tr>
+          <tr ng-if="council['percent_fuel_poor']">
+            <th>Percentage in fuel poverty</th>
+            <td>{{council["percent_fuel_poor"] | number:0}}%</td>
+          </tr>
+          <tr>
+            <th>Solar PV total installed capacity</th>
+            <td>{{council["pv_total"] | number:0}} kW</td>
+          </tr>
+          <tr>
+            <th>Wind total installed capacity</th>
+            <td>{{council["wind_total"] | number:0}} kW</td>
+          </tr>
+          <tr>
+            <th>Anaerobic digestion total installed capacity</th>
+            <td>{{council["anaerobic_total"] | number:0}} kW</td>
+          </tr>
+          <tr>
+            <th>CHP total installed capacity</th>
+            <td>{{council["chp_total"] | number:0}} kW</td>
+          </tr>
+          <tr>
+            <th>Hydro total installed capacity</th>
+            <td>{{council["hydro_total"] | number:0}} kW</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
